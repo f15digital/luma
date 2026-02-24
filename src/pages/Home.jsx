@@ -37,7 +37,7 @@ const Home = () => {
                 <div className="container">
                     <motion.div {...fadeIn} style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
                         <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', marginBottom: '1.5rem', fontWeight: 800 }}>
-                            <span className="lime-text">Empresa Líder</span> em Terceirização de Limpeza Campinas, Valinhos e Vinhedo
+                            <span className="lime-text">Empresa Líder em Terceirização de Limpeza</span> Campinas, Valinhos e Vinhedo
                         </h1>
                         <p style={{ fontSize: '1.2rem', marginBottom: '2.5rem', color: 'rgba(255,255,255,0.8)', maxWidth: '750px', margin: '0 auto 2.5rem' }}>
                             Soluções especializadas de limpeza para escritórios, condomínios e empresas em Campinas e Região. Reduza custos com gestão de facilities eficiente e profissionais CLT treinados.
