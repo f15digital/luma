@@ -136,6 +136,81 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Video Section */}
+            <section style={{ backgroundColor: '#111', padding: '6rem 0' }}>
+                <div className="container">
+                    <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+                        <div style={{
+                            position: 'relative',
+                            paddingBottom: '56.25%',
+                            height: 0,
+                            overflow: 'hidden',
+                            borderRadius: '30px',
+                            boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
+                            backgroundColor: '#000'
+                        }}>
+                            <iframe
+                                src="https://www.youtube.com/embed/UevOHQx4RWo"
+                                style={{
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0,
+                                    width: '100%',
+                                    height: '100%',
+                                    border: 'none'
+                                }}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                                title="Grupo Luma Apresentação"
+                            ></iframe>
+                        </div>
+                        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+                            <h2 style={{ fontSize: '2rem', marginBottom: '1rem', color: 'white' }}>Conheça nossa <span className="lime-text">Excelência</span></h2>
+                            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.1rem' }}>
+                                Assista ao vídeo e veja como transformamos a gestão de facilities com tecnologia e capital humano.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Client Logos Section */}
+            <section style={{ backgroundColor: 'white', padding: '4rem 0', borderTop: '1px solid rgba(0,0,0,0.05)', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>
+                <div className="container">
+                    <h2 style={{ textAlign: 'center', fontSize: '1.5rem', marginBottom: '3rem', color: '#666', fontWeight: 600 }}>Clientes que Confiam em Nossa Excelência</h2>
+                    <div style={{
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        gap: '3rem',
+                        opacity: 0.7
+                    }}>
+                        {[
+                            'braga-150x150-1.jpg', 'integrat-150x150-1.jpg', 'jbs-150x150-1.jpg',
+                            'kynetex-150x150-1.jpg', 'marson-150x150-1.jpg', 'mct-150x150-1.jpg',
+                            'montrel-150x150-1.jpg', 'msp-150x150-1.jpg', 'multivac-150x150-1.jpg',
+                            'ns-150x150-1.jpg', 'olimpo-150x150-1.jpg', 'phoron-150x150-1.jpg',
+                            'texas-150x150-1.jpg', 'wtm-150x150-1.jpg'
+                        ].map((logo, i) => (
+                            <img
+                                key={i}
+                                src={`/logos/${logo}`}
+                                alt="Client Logo"
+                                style={{
+                                    height: '60px',
+                                    width: 'auto',
+                                    filter: 'grayscale(100%)',
+                                    transition: 'filter 0.3s ease'
+                                }}
+                                onMouseOver={e => e.currentTarget.style.filter = 'grayscale(0%)'}
+                                onMouseOut={e => e.currentTarget.style.filter = 'grayscale(100%)'}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* Diferenciais Section */}
             <section>
                 <div className="container">
