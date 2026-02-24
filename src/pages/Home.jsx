@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Users, Clock, Zap, CheckCircle2, ArrowRight, MessageSquare } from 'lucide-react';
 
-import heroImg from '../assets/hero-bg-new.png';
+import heroImg from '../assets/hero-bg-new.jpg';
 import corporateImg from '../assets/corporate.png';
 import condoImg from '../assets/condo.png';
 import industrialImg from '../assets/industrial.png';
