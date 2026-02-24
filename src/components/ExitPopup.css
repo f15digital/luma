@@ -1,0 +1,147 @@
+.exit-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    backdrop-filter: blur(5px);
+    padding: 1.5rem;
+}
+
+.exit-popup-container {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.exit-popup-header {
+    background: #000;
+    color: white;
+    padding: 1.5rem 2rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0;
+    color: white;
+}
+
+.header-subtitle {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-top: 0.25rem;
+}
+
+.close-btn {
+    background: transparent;
+    color: white;
+    opacity: 0.7;
+    padding: 0.5rem;
+    margin: -0.5rem -0.5rem 0 0;
+}
+
+.close-btn:hover {
+    opacity: 1;
+}
+
+.exit-popup-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.whatsapp-corporate-btn {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background: #A2FF00;
+    /* Matching branding and image */
+    color: #000;
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px;
+    width: 100%;
+    text-align: left;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(162, 255, 0, 0.3);
+}
+
+.whatsapp-corporate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(162, 255, 0, 0.4);
+    background: #b1ff25;
+}
+
+.whatsapp-icon-wrapper {
+    flex-shrink: 0;
+}
+
+.btn-text-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-text {
+    font-size: 1.1rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.sub-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.warning-box {
+    background: #FFF5F0;
+    border: 1px solid #FFE0D0;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.warning-icon {
+    color: #FF5E00;
+    flex-shrink: 0;
+}
+
+.warning-text {
+    font-size: 0.85rem;
+    color: #612D11;
+    line-height: 1.4;
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .exit-popup-header {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .exit-popup-body {
+        padding: 1.5rem;
+    }
+
+    .header-title {
+        font-size: 1.25rem;
+    }
+
+    .main-text {
+        font-size: 1rem;
+    }
+}

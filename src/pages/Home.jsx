@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Users, Clock, Zap, CheckCircle2, ArrowRight, MessageSquare } from 'lucide-react';
+import SEO from '../components/SEO';
 
 import heroImg from '../assets/hero-bg-new.jpg';
 import corporateImg from '../assets/corporate.png';
@@ -23,6 +24,11 @@ const Home = () => {
 
     return (
         <div className="home-page">
+            <SEO
+                title="Terceirização de Limpeza em Campinas | Empresa de Limpeza"
+                description="Líder em terceirização de limpeza em Campinas, Valinhos e Vinhedo. Especialistas em limpeza corporativa e gestão de facilities com profissionais treinados."
+                keywords="Terceirização de limpeza, Empresa de limpeza, Limpeza Corporativa, Terceirização de limpeza em Campinas, Empresa de limpeza em Campinas"
+            />
             {/* Hero Section */}
             <section style={{
                 height: '100vh',
@@ -111,15 +117,15 @@ const Home = () => {
             {/* Specialties B2B */}
             <section style={{ backgroundColor: 'var(--primary)', paddingTop: 0 }}>
                 <div className="container">
-                    <h2 className="section-title" style={{ color: 'var(--secondary)' }}>Nossas Especialidades B2B</h2>
+                    <h2 className="section-title" style={{ color: 'var(--secondary)' }}>Nossas Especialidades em Limpeza e Facilities</h2>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                         {[
-                            { title: "Limpeza Corporativa", img: images.corporate },
-                            { title: "Limpeza para Condomínios", img: images.condo },
-                            { title: "Limpeza Industrial", img: images.industrial }
+                            { title: "Limpeza Corporativa", img: images.corporate, alt: "Serviço de Limpeza Corporativa em escritórios de alto padrão" },
+                            { title: "Limpeza para Condomínios", img: images.condo, alt: "Empresa de limpeza em Campinas para condomínios residenciais" },
+                            { title: "Limpeza Industrial", img: images.industrial, alt: "Terceirização de limpeza industrial para fábricas e galpões" }
                         ].map((specialty, i) => (
                             <div key={i} style={{ borderRadius: '20px', overflow: 'hidden', backgroundColor: 'white' }}>
-                                <img src={specialty.img} alt={specialty.title} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+                                <img src={specialty.img} alt={specialty.alt} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
                                 <div style={{ padding: '1.5rem', color: 'var(--secondary)' }}>
                                     <h3 style={{ marginBottom: '0.5rem' }}>{specialty.title}</h3>
                                     <p style={{ fontSize: '0.9rem', opacity: 0.7 }}>Soluções premium para ambientes de alto desempenho.</p>

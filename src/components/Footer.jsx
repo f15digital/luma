@@ -53,7 +53,7 @@ const Footer = () => {
                 </div>
 
                 <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '2rem', textAlign: 'center', color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem' }}>
-                    <p>&copy; {new Date().getFullYear()} Grupo Luma. Todos os direitos reservados. Desenvolvido com Antigravity.</p>
+                    <p>&copy; {new Date().getFullYear()} Luma Terceirização. Todos os direitos reservados. Criado por: F15 Digital - <a href="https://f15digital.com.br" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid currentColor' }}>agência de marketing digital</a></p>
                 </div>
             </div>
         </footer>
