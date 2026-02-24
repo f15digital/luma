@@ -56,6 +56,28 @@ button {
   padding: 0 1.5rem;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-150px * 7));
+  }
+
+  /* Based on logo width + gap */
+}
+
+.marquee-container {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-container:hover {
+  animation-play-state: paused;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
