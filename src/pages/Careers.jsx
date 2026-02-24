@@ -3,6 +3,13 @@ import { motion } from 'framer-motion';
 import { Briefcase, MapPin, Send } from 'lucide-react';
 
 const Careers = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const phone = '5519988820950';
+        const message = encodeURIComponent('Olá gostaria de solicitar um orçamento');
+        window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+    };
+
     const jobs = [
         { title: "Auxiliar de Limpeza", location: "Campinas e Região", type: "Presencial" },
         { title: "Limpador de Vidros", location: "Campinas e Região", type: "Presencial" },
@@ -45,7 +52,7 @@ const Careers = () => {
                         <div>
                             <div style={{ padding: '3rem', backgroundColor: 'white', borderRadius: '30px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
                                 <h2 style={{ fontSize: '2rem', marginBottom: '2rem', color: 'black' }}>Envie seu Currículo</h2>
-                                <form style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
+                                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
                                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                                         <label style={{ fontSize: '0.9rem', color: '#444' }}>Nome Completo</label>
                                         <input type="text" style={{ padding: '1rem', borderRadius: '10px', background: 'rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.1)', color: 'black' }} />

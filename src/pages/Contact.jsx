@@ -3,6 +3,13 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, MessageCircle, Clock } from 'lucide-react';
 
 const Contact = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const phone = '5519988820950';
+        const message = encodeURIComponent('Olá gostaria de solicitar um orçamento');
+        window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+    };
+
     return (
         <div className="contact-page">
             <section style={{ paddingTop: '160px', backgroundColor: 'var(--primary)', paddingBottom: '6rem' }}>
@@ -62,7 +69,7 @@ const Contact = () => {
                         <div style={{ gridColumn: 'span 2' }}>
                             <div style={{ padding: '3rem', height: '100%', backgroundColor: 'white', borderRadius: '30px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
                                 <h2 style={{ fontSize: '2rem', marginBottom: '2.5rem', color: 'black' }}>Envie uma Mensagem</h2>
-                                <form style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+                                <form onSubmit={handleSubmit} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
                                     <input placeholder="Seu Nome" style={{ padding: '1rem', borderRadius: '10px', background: 'rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.1)', color: 'black' }} />
                                     <input placeholder="Seu E-mail" style={{ padding: '1rem', borderRadius: '10px', background: 'rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.1)', color: 'black' }} />
                                     <input placeholder="Empresa" style={{ padding: '1rem', borderRadius: '10px', background: 'rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.1)', color: 'black' }} />

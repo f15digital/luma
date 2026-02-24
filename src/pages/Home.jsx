@@ -9,6 +9,12 @@ import condoImg from '../assets/condo.png';
 import industrialImg from '../assets/industrial.png';
 
 const Home = () => {
+    const handleWhatsApp = () => {
+        const phone = '5519988820950';
+        const message = encodeURIComponent('Olá gostaria de solicitar um orçamento');
+        window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+    };
+
     const images = {
         hero: heroImg,
         corporate: corporateImg,
@@ -49,9 +55,9 @@ const Home = () => {
                             Soluções especializadas de limpeza para escritórios, condomínios e empresas em Campinas e Região. Reduza custos com gestão de facilities eficiente e profissionais CLT treinados.
                         </p>
                         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                            <a href="#contato" className="btn btn-primary">
+                            <button onClick={handleWhatsApp} className="btn btn-primary">
                                 Solicitar Orçamento <ArrowRight size={18} />
-                            </a>
+                            </button>
                         </div>
                     </motion.div>
                 </div>
@@ -80,7 +86,7 @@ const Home = () => {
                         <p style={{ fontSize: '1.1rem', color: '#444', marginBottom: '2rem' }}>
                             A terceirização de limpeza para empresas exige profissionalismo absoluto. Na Luma, reduzimos seus custos operacionais fornecendo equipes 100% CLT e supervisão técnica rigorosa.
                         </p>
-                        <button className="btn btn-primary" style={{ backgroundColor: 'var(--accent)' }}>
+                        <button onClick={handleWhatsApp} className="btn btn-primary" style={{ backgroundColor: 'var(--accent)' }}>
                             Falar com Consultor
                         </button>
                     </motion.div>
@@ -243,7 +249,7 @@ const Home = () => {
                             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                                 {[
                                     "Atendimento B2B Personalizado",
-                                    "Gestão de Facilities com foco em redução de custos",
+                                    "Gestão de Facilities with foco em redução de custos",
                                     "Cronogramas de limpeza técnica detalhados",
                                     "Reposição de faltas garantida em contrato",
                                     "Suporte operacional ágil e eficiente"
@@ -253,7 +259,7 @@ const Home = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <button className="btn btn-primary" style={{ width: '100%', marginTop: '3rem', backgroundColor: 'var(--accent)' }}>
+                            <button onClick={handleWhatsApp} className="btn btn-primary" style={{ width: '100%', marginTop: '3rem', backgroundColor: 'var(--accent)' }}>
                                 <MessageSquare size={18} /> Falar com Especialista
                             </button>
                         </div>
