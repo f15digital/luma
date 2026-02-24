@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Users, Clock, Zap, CheckCircle2, ArrowRight, MessageSquare } from 'lucide-react';
 
-import heroImg from '../assets/hero-bg.png';
+import heroImg from '../assets/hero-bg-new.png';
 import corporateImg from '../assets/corporate.png';
 import condoImg from '../assets/condo.png';
 import industrialImg from '../assets/industrial.png';
@@ -29,7 +29,7 @@ const Home = () => {
                 display: 'flex',
                 alignItems: 'center',
                 position: 'relative',
-                backgroundImage: `linear-gradient(rgba(8, 8, 8, 0.8), rgba(8, 8, 8, 0.6)), url(${images.hero})`,
+                backgroundImage: `linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.4)), url(${images.hero})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 paddingTop: '80px'
