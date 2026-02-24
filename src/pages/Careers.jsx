@@ -4,14 +4,14 @@ import { Briefcase, MapPin, Send } from 'lucide-react';
 
 const Careers = () => {
     const jobs = [
-        { title: "Assistente Financeiro", location: "Jaguariúna, SP", type: "Presencial" },
-        { title: "Cozinheiro(a) Líder", location: "Jaguariúna, SP", type: "Presencial" },
-        { title: "Nutricionista", location: "Jaguariúna, SP", type: "Presencial" }
+        { title: "Auxiliar de Limpeza", location: "Campinas e Região", type: "Presencial" },
+        { title: "Limpador de Vidros", location: "Campinas e Região", type: "Presencial" },
+        { title: "Encarregado(a) de Limpeza", location: "Campinas e Região", type: "Presencial" }
     ];
 
     return (
         <div className="careers-page">
-            <section style={{ paddingTop: '160px', backgroundColor: 'var(--primary)' }}>
+            <section style={{ paddingTop: '160px', backgroundColor: 'var(--primary)', paddingBottom: '6rem' }}>
                 <div className="container">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -20,7 +20,7 @@ const Careers = () => {
                     >
                         <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', color: 'black' }}>Trabalhe Conosco</h1>
                         <p style={{ fontSize: '1.2rem', color: 'rgba(0,0,0,0.8)', maxWidth: '700px', margin: '0 auto' }}>
-                            Junte-se a uma empresa que valoriza o capital humano e oferece oportunidades reais de crescimento.
+                            Junte-se a uma empresa que valoriza o capital humano e oferece oportunidades reais de crescimento na área de facilities.
                         </p>
                     </motion.div>
 
@@ -37,7 +37,6 @@ const Careers = () => {
                                                 <span style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}><Briefcase size={14} /> {job.type}</span>
                                             </div>
                                         </div>
-                                        <button className="btn btn-outline" style={{ padding: '0.5rem 1.2rem', fontSize: '0.85rem', borderColor: 'var(--accent)', color: 'var(--accent)' }}>Ver Detalhes</button>
                                     </div>
                                 ))}
                             </div>
@@ -66,6 +65,10 @@ const Careers = () => {
                                             {jobs.map(j => <option key={j.title}>{j.title}</option>)}
                                             <option>Banco de Talentos</option>
                                         </select>
+                                    </div>
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                                        <label style={{ fontSize: '0.9rem', color: '#444' }}>Fale sobre sua experiência</label>
+                                        <textarea style={{ padding: '1rem', borderRadius: '10px', background: 'rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.1)', color: 'black', minHeight: '120px', resize: 'vertical' }} placeholder="Conte-nos um pouco sobre sua trajetória profissional..."></textarea>
                                     </div>
                                     <button type="submit" className="btn btn-primary" style={{ marginTop: '1rem', backgroundColor: 'var(--accent)' }}>
                                         Enviar Candidatura <Send size={18} />
