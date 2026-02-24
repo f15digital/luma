@@ -69,38 +69,41 @@ const About = () => {
             </section>
 
             {/* Client Logos Section */}
-            <section style={{ backgroundColor: 'white', padding: '4rem 0', marginTop: '0' }}>
+            <section style={{ backgroundColor: 'white', padding: '6rem 0', borderTop: '1px solid rgba(0,0,0,0.05)', borderBottom: '1px solid rgba(0,0,0,0.05)', overflow: 'hidden' }}>
                 <div className="container">
-                    <h2 style={{ textAlign: 'center', fontSize: '1.5rem', marginBottom: '3rem', color: '#666', fontWeight: 600 }}>Parcerias de Sucesso</h2>
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        gap: '3rem',
-                        opacity: 0.7
-                    }}>
-                        {[
-                            'braga-150x150-1.jpg', 'integrat-150x150-1.jpg', 'jbs-150x150-1.jpg',
-                            'kynetex-150x150-1.jpg', 'marson-150x150-1.jpg', 'mct-150x150-1.jpg',
-                            'montrel-150x150-1.jpg', 'msp-150x150-1.jpg', 'multivac-150x150-1.jpg',
-                            'ns-150x150-1.jpg', 'olimpo-150x150-1.jpg', 'phoron-150x150-1.jpg',
-                            'texas-150x150-1.jpg', 'wtm-150x150-1.jpg'
-                        ].map((logo, i) => (
-                            <img
-                                key={i}
-                                src={`/logos/${logo}`}
-                                alt="Client Logo"
-                                style={{
-                                    height: '60px',
-                                    width: 'auto',
-                                    filter: 'grayscale(100%)',
-                                    transition: 'filter 0.3s ease'
-                                }}
-                                onMouseOver={e => e.currentTarget.style.filter = 'grayscale(0%)'}
-                                onMouseOut={e => e.currentTarget.style.filter = 'grayscale(100%)'}
-                            />
-                        ))}
+                    <h2 className="section-title" style={{ color: 'var(--secondary)', marginBottom: '4rem' }}>Parcerias de Sucesso</h2>
+
+                    <div style={{ position: 'relative', width: '100%' }}>
+                        <div className="marquee-container" style={{ display: 'flex', gap: '4rem', alignItems: 'center' }}>
+                            {[
+                                'braga-150x150-1.jpg', 'integrat-150x150-1.jpg', 'jbs-150x150-1.jpg',
+                                'kynetex-150x150-1.jpg', 'marson-150x150-1.jpg', 'mct-150x150-1.jpg',
+                                'montrel-150x150-1.jpg', 'msp-150x150-1.jpg', 'multivac-150x150-1.jpg',
+                                'ns-150x150-1.jpg', 'olimpo-150x150-1.jpg', 'phoron-150x150-1.jpg',
+                                'texas-150x150-1.jpg', 'wtm-150x150-1.jpg',
+                                // Duplicate for seamless loop
+                                'braga-150x150-1.jpg', 'integrat-150x150-1.jpg', 'jbs-150x150-1.jpg',
+                                'kynetex-150x150-1.jpg', 'marson-150x150-1.jpg', 'mct-150x150-1.jpg',
+                                'montrel-150x150-1.jpg', 'msp-150x150-1.jpg', 'multivac-150x150-1.jpg',
+                                'ns-150x150-1.jpg', 'olimpo-150x150-1.jpg', 'phoron-150x150-1.jpg',
+                                'texas-150x150-1.jpg', 'wtm-150x150-1.jpg'
+                            ].map((logo, i) => (
+                                <img
+                                    key={i}
+                                    src={`/logos/${logo}`}
+                                    alt="Client Logo"
+                                    style={{
+                                        height: '70px',
+                                        width: 'auto',
+                                        filter: 'grayscale(100%)',
+                                        transition: 'filter 0.3s ease',
+                                        flexShrink: 0
+                                    }}
+                                    onMouseOver={e => e.currentTarget.style.filter = 'grayscale(0%)'}
+                                    onMouseOut={e => e.currentTarget.style.filter = 'grayscale(100%)'}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
