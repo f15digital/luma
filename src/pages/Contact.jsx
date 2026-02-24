@@ -76,7 +76,7 @@ const Contact = () => {
 
                     <div style={{ marginTop: '4rem', borderRadius: '30px', overflow: 'hidden', height: '400px', border: '1px solid rgba(0,0,0,0.1)' }}>
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.5776106263544!2d-47.0390176!3d-22.8920496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8cf4249a9a3b7%3A0x6b3068e1a662ad7!2sAv.%20Selma%20Parada%2C%20201%20-%20Campinas%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.3059200458997!2d-47.02469582439314!3d-22.865154879284407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c59d018918c1%3A0x6acb932ba1e5a40a!2sCondom%C3%ADnio%20Galleria%20Office%20Park!5e0!3m2!1spt-BR!2sbr!4v1771959365180!5m2!1spt-BR!2sbr"
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}
